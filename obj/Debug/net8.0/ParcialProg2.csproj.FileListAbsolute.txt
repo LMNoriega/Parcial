@@ -1,0 +1,14 @@
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\bin\Debug\net8.0\ParcialProg2.exe
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\bin\Debug\net8.0\ParcialProg2.deps.json
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\bin\Debug\net8.0\ParcialProg2.runtimeconfig.json
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\bin\Debug\net8.0\ParcialProg2.dll
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\bin\Debug\net8.0\ParcialProg2.pdb
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.AssemblyInfoInputs.cache
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.AssemblyInfo.cs
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.csproj.CoreCompileInputs.cache
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.dll
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\refint\ParcialProg2.dll
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.pdb
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.genruntimeconfig.cache
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ref\ParcialProg2.dll
