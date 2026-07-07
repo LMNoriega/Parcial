@@ -12,3 +12,4 @@ C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\refint\Par
 C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.pdb
 C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.genruntimeconfig.cache
 C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ref\ParcialProg2.dll
+C:\Users\Luki\Desktop\Proyectos\Parcial\ParcialProg2\obj\Debug\net8.0\ParcialProg2.sourcelink.json

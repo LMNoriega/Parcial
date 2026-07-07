@@ -44,12 +44,24 @@ namespace ParcialProg2
                         RegistrarAtencion(); // Llama al método principal del parcial
                         break;
                     case "2":
+                        CargarVeterinario();
+                        break;
+                    case "3":
+                        CargarAsistente();
+                        break;
+                    case "4":
+                        CargarConsultorioGeneral();
+                        break;
+                    case "5":
+                        CargarQuirofano();
+                        break;
+                    case "6":
                         break; // Sale del programa
                     default:
                         vista.MostrarMensaje("Opción no válida.\n");
                         break;
                 }
-            } while (opcion != "2");
+            } while (opcion != "6");
         }
 
         // Método principal de negocio que evalúa el parcial (Validaciones con Excepciones)
@@ -137,6 +149,83 @@ namespace ParcialProg2
                 Console.Clear();
                 vista.MostrarMensaje($"ERROR: {ex.Message}\n");
             }
+        }
+        // ================= MÉTODOS DE CARGA MANUAL (ABM) =================
+        public void CargarVeterinario()
+        {
+            vista.MostrarMensaje("--- Cargar Nuevo Veterinario ---");
+            ulong legajo = vista.PedirULong("Legajo: ");
+            if (conjunto.ExisteTrabajador(legajo))
+            {
+                vista.MostrarMensaje("Error: Ya existe un trabajador con ese legajo.\n");
+                return;
+            }
+            string apellido = vista.PedirTexto("Apellido: ");
+            string nombre = vista.PedirTexto("Nombre: ");
+            uint matricula = vista.PedirUInt("Matrícula Profesional: ");
+            string especialidad = vista.PedirTexto("Especialidad (Clínica/Cirugía): ");
+
+            CVeterinario vet = new CVeterinario { Legajo = legajo, Apellido = apellido, Nombre = nombre, MatriculaProfesional = matricula, Especialidad = especialidad };
+            conjunto.AgregarTrabajador(vet);
+            Console.Clear();
+            vista.MostrarMensaje("Veterinario cargado exitosamente.\n");
+        }
+
+        public void CargarAsistente()
+        {
+            vista.MostrarMensaje("--- Cargar Nuevo Asistente ---");
+            ulong legajo = vista.PedirULong("Legajo: ");
+            if (conjunto.ExisteTrabajador(legajo))
+            {
+                vista.MostrarMensaje("Error: Ya existe un trabajador con ese legajo.\n");
+                return;
+            }
+            string apellido = vista.PedirTexto("Apellido: ");
+            string nombre = vista.PedirTexto("Nombre: ");
+            string certInput = vista.PedirTexto("¿Tiene certificación en manejo animal? (s/n): ");
+            bool cert = (certInput.ToLower() == "s" || certInput.ToLower() == "si" || certInput.ToLower() == "sí");
+
+            CAsistente asis = new CAsistente { Legajo = legajo, Apellido = apellido, Nombre = nombre, CertificacionManejoAnimal = cert };
+            conjunto.AgregarTrabajador(asis);
+            Console.Clear();
+            vista.MostrarMensaje("Asistente cargado exitosamente.\n");
+        }
+
+        public void CargarConsultorioGeneral()
+        {
+            vista.MostrarMensaje("--- Cargar Consultorio General ---");
+            ushort numero = vista.PedirUShort("Número: ");
+            if (conjunto.ObtenerConsultorio(numero) != null)
+            {
+                vista.MostrarMensaje("Error: Ya existe un consultorio con ese número.\n");
+                return;
+            }
+            string sector = vista.PedirTexto("Sector: ");
+            ushort piso = vista.PedirUShort("Piso: ");
+
+            CConsultorioGeneral gen = new CConsultorioGeneral { Numero = numero, Sector = sector, Piso = piso };
+            conjunto.AgregarConsultorio(gen);
+            Console.Clear();
+            vista.MostrarMensaje("Consultorio General cargado exitosamente.\n");
+        }
+
+        public void CargarQuirofano()
+        {
+            vista.MostrarMensaje("--- Cargar Quirófano ---");
+            ushort numero = vista.PedirUShort("Número: ");
+            if (conjunto.ObtenerConsultorio(numero) != null)
+            {
+                vista.MostrarMensaje("Error: Ya existe un consultorio con ese número.\n");
+                return;
+            }
+            string sector = vista.PedirTexto("Sector: ");
+            ushort piso = vista.PedirUShort("Piso: ");
+            ushort capacidad = vista.PedirUShort("Capacidad máxima de asistentes: ");
+
+            CQuirofano quiro = new CQuirofano { Numero = numero, Sector = sector, Piso = piso, CapacidadMaximaAsistentes = capacidad };
+            conjunto.AgregarConsultorio(quiro);
+            Console.Clear();
+            vista.MostrarMensaje("Quirófano cargado exitosamente.\n");
         }
     }
 }

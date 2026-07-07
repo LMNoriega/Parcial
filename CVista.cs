@@ -10,7 +10,11 @@ namespace ParcialProg2
         {
             Console.WriteLine("=== SISTEMA CLÍNICA VETERINARIA ===");
             Console.WriteLine("1. Registrar Atención");
-            Console.WriteLine("2. Salir");
+            Console.WriteLine("2. Cargar Veterinario");
+            Console.WriteLine("3. Cargar Asistente");
+            Console.WriteLine("4. Cargar Consultorio General");
+            Console.WriteLine("5. Cargar Quirófano");
+            Console.WriteLine("6. Salir");
             Console.WriteLine("===================================");
         }
 
@@ -40,6 +44,14 @@ namespace ParcialProg2
         {
             Console.Write(mensaje);
             ulong.TryParse(Console.ReadLine(), out ulong resultado);
+            return resultado;
+        }
+
+        // Pide un número entero sin signo (uint). Usado para la matrícula
+        public uint PedirUInt(string mensaje)
+        {
+            Console.Write(mensaje);
+            uint.TryParse(Console.ReadLine(), out uint resultado);
             return resultado;
         }
     }
